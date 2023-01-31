@@ -1,0 +1,25 @@
+names = []
+writers = []
+years = []
+a = 0
+print("Welcome to the Digitial Library \n")
+while True:
+    name = input("Write Book's Name: ")
+    if name == "exit":
+        break
+    for i in range(len(names)):
+        if names[i] == name:
+            a = 1
+    if a == 1:
+        print ("Book is already in the library !")
+        a = 0
+    else:
+        writer = input("Write writer name: ")
+        year = int(input("write the year: "))
+        names.append(name)
+        years.append(year)
+        writers.append(writer)
+        print("The book is added.")
+        print("Library contant after updating: ")
+    for i in range(len(names)):
+        print(names[i],writers[i],years[i])
